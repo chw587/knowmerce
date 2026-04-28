@@ -1,0 +1,125 @@
+:root {
+    /* Colors */
+    --main: #FB4866;
+
+    --wh: #fafafa;
+    --text: #111;
+    --sub_text: #757575;
+
+    --hover: linear-gradient(to right,
+            #FB4866 0%,
+            #FB6455 50%,
+            #E570D0 100%);
+
+    --footer: #333;
+
+    /* Font */
+    --title: 48px;
+    --titel_2: 24px;
+    --sub_title: 20px;
+
+    --body: 16px;
+    --sub_body: 14px;
+    --caption: 12px;
+
+    /* gap */
+    --gap_0: 4px;
+    --gap_1: 8px;
+    --gap_2: 16px;
+    --gap_3: 20px;
+
+    --title_gap: 32px;
+}
+
+
+/* ============================================================
+   header
+   ============================================================ */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: red;
+    border-bottom: 1px solid var(--wh);
+    padding: 10px 40px;
+    z-index: 100;
+}
+
+header>div {
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.left-group,
+.right-group {
+    display: flex;
+    align-items: center;
+}
+
+.left-group {
+    gap: 40px;
+}
+
+.logo {
+    font-size: 28px;
+    color: var(--wh);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: var(--title_gap);
+}
+
+nav a {
+    color: var(--wh);
+    text-decoration: none;
+    font-size: var(--sub_body);
+}
+
+.right-group {
+    gap: var(--gap_2);
+}
+
+.badge-tech {
+    border: 1px solid var(--wh);
+    color: var(--wh);
+    font-size: var(--sub_body);
+    padding: 4px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.badge-tech:hover {
+    border-color: var(--main);
+    color: var(--main);
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: var(--gap_1);
+}
+
+.social-icons a {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    color: var(--wh);
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.social-icons svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
