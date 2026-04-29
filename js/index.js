@@ -1,7 +1,7 @@
 // 영상재생
 const videos = [
-    "./img/video/P1Harmony.mp4",
-    "./img/video/YOUNG POSSE.mp4",
+    "https://drive.google.com/uc?export=view&id=1Fjh7OCLdR3MyRg8XTxjjMbkjKDCm6URk",
+    "https://drive.google.com/uc?export=view&id=1JR8CSnB94VroQFhZO1ESaFxhD27B2LTd",
 ];
 
 const videoEl = document.getElementById("heroVideo");
