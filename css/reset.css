@@ -12,34 +12,27 @@
 :root {
     /* Colors */
     --main: #FB4866;
-
+    --main_20: rgba(251, 72, 102, 0.20);
     --wh: #fafafa;
     --text: #111;
     --sub_text: #757575;
     --line: #ddd;
-
-    --hover: linear-gradient(to right,
-            #FB4866 0%,
-            #FB6455 50%,
-            #E570D0 100%);
-
     --footer: #333;
+    --hover: linear-gradient(to right, #FB4866 0%, #FB6455 50%, #E570D0 100%);
 
     /* Font */
     --title: 48px;
     --titel_2: 24px;
     --sub_title: 20px;
-
     --body: 16px;
     --sub_body: 14px;
     --caption: 12px;
 
-    /* gap */
+    /* Gap */
     --gap_0: 4px;
     --gap_1: 8px;
     --gap_2: 16px;
     --gap_3: 20px;
-
     --title_gap: 32px;
 }
 

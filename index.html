@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>knowmerce</title>
-
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
 </head>
 
 <body>
@@ -24,31 +26,329 @@
                     <a href="#">IR</a>
                 </nav>
             </div>
-
             <div class="right-group">
-                <span class="badge-tech">tech</span>
+                <a href="https://tech.wonderwall.kr/" class="badge-tech">tech</a>
                 <div class="social-icons">
-                    <!-- Instagram -->
-                    <a href="#"><svg viewBox="0 0 24 24">
+                    <a href="https://www.instagram.com/wonderwall.kr/" target="_blank">
+                        <svg viewBox="0 0 24 24">
                             <path
                                 d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                        </svg></a>
-                    <!-- Facebook -->
-                    <a href="#"><svg viewBox="0 0 24 24">
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/wonderwallofficial0/" target="_blank">
+                        <svg viewBox="0 0 24 24">
                             <path
                                 d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
-                        </svg></a>
-                    <!-- YouTube -->
-                    <a href="#"><svg viewBox="0 0 24 24">
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/c/WONDERWALLCLASS" target="_blank">
+                        <svg viewBox="0 0 24 24">
                             <path
                                 d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                        </svg></a>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <main></main>
+    <main>
+
+        <!-- ── Section 1: Hero ── -->
+        <section class="section_1 hero">
+            <video class="hero-video" id="heroVideo" autoplay muted playsinline></video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-logo-mark">
+                    <img src="./img/logo_wh.svg" alt="logo_wh">
+                    <span class="logo">Knowmerce</span>
+                </div>
+                <p class="hero-desc">
+                    노머스는 문화예술 분야의 노하우로 출발해 아티스트와 팬을 연결해온 '엔터 테크' 기업입니다.<br>
+                    국내외 아티스트들의 IP를 기반으로 데이터와 기술을 활용해<br>
+                    엔터 비즈니스를 혁신하고 독보적인 종합 엔터 솔류션으로 부상하고 있습니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- ── Section 2: Business ── -->
+        <section class="section_2 business">
+            <div class="business-title">
+                <div class="slide-wrapper">
+                    <div class="slide-track">
+                        <img src="./img/fromm.svg" alt="fromm">
+                        <img src="./img/wonderwall.svg" alt="wonderwall">
+                        <img src="./img/fromm.svg" alt="fromm">
+                        <img src="./img/wonderwall.svg" alt="wonderwall">
+                        <img src="./img/fromm.svg" alt="fromm">
+                        <img src="./img/wonderwall.svg" alt="wonderwall">
+                        <img src="./img/fromm.svg" alt="fromm">
+                        <img src="./img/wonderwall.svg" alt="wonderwall">
+                    </div>
+                </div>
+                <p class="business-sub">Entertainment + Technology</p>
+                <h1>"<span>엔터테크</span>"</h1>
+            </div>
+
+            <div class="business-inner">
+                <div class="business-cards">
+                    <div class="business-card">
+                        <div class="card-header">
+                            <img src="./img/icon/music.svg" alt="Music">
+                            <div class="card-title">
+                                <span class="card-category">ARTIST ACTIVITY</span>
+                                <h3>아티스트 직접 활동</h3>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>앨범판매</li>
+                            <li>공연 주최</li>
+                            <li>콘텐츠 제작 및 관리</li>
+                        </ul>
+                    </div>
+                    <div class="business-card">
+                        <div class="card-header">
+                            <img src="./img/icon/goods.svg" alt="Goods">
+                            <div class="card-title">
+                                <span class="card-category">MD & COMMERCE</span>
+                                <h3>MD제작 / 판매</h3>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>IP기반 굿즈 제작</li>
+                            <li>온/오프라인 판매</li>
+                            <li>판매 권리 게약 관리</li>
+                        </ul>
+                    </div>
+                    <div class="business-card">
+                        <div class="card-header">
+                            <img src="./img/icon/chat.svg" alt="Chat">
+                            <div class="card-title">
+                                <span class="card-category">FAN PLATFORM</span>
+                                <h3>팬플랫폼 / 커뮤니티</h3>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>유료 메세지 서비스</li>
+                            <li>팬클럽 운영 및 관리</li>
+                            <li>IP사용 권리 계약</li>
+                        </ul>
+                    </div>
+                    <div class="business-card">
+                        <div class="card-header">
+                            <img src="./img/icon/data.svg" alt="Data">
+                            <div class="card-title">
+                                <span class="card-category">DATA & PLATFORM</span>
+                                <h3>데이터 / 엔터테크</h3>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>콘텐츠/커머스/공연 데이터</li>
+                            <li>프로젝트 부가가치 극대화</li>
+                            <li>신규 비즈니스 기회 창출</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="btn">About us</a>
+            </div>
+        </section>
+
+        <!-- ── Section 3: Wonderwall ── -->
+        <section class="section_3 wonderwall">
+            <div class="wonderwall-content">
+                <div class="wonderwall-left">
+                    <h2>당신의 삶을 바꾸는 N개의 경험,<br>오직 <span>( 원더월에서 )</span></h2>
+                </div>
+                <div class="wonderwall-right">
+                    <p>모든 사람들은 예술을 꿈꾸며, 예술을 통해 영감을 얻고 위로를 받습니다.<br>
+                        그렇게 꿈꾸는 예술이 한 사람의 인생을 바꾸기도 합니다.<br>
+                        원더월 팀은 그 인생을 변화시키는 예술을 만들어나가는데 늘 함께 하고자 합니다.</p>
+                    <a href="#" class="btn">See more</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Section 4: News ── -->
+        <section class="section_4 news">
+            <div class="section-title">
+                <h2>NEWS</h2>
+                <p>언론에서 바라본 노머스</p>
+            </div>
+
+            <div class="news-slider-wrapper card-slider-wrapper">
+                <button class="slider-btn prev">
+                    <span class="material-symbols-outlined">arrow_back_ios</span>
+                </button>
+                <div class="news-slider card-slider">
+                    <div class="news-card card-slide">
+                        <img src="./img/news/news_1.jpg" alt="뉴스1">
+                        <div class="news-card-info card-slide-info">
+                            <h4>노머스 "중소형 K팝 아티스트 성장 돕는 플랫폼 될 것"</h4>
+                            <span>매일경제 | 2024.10.03.</span>
+                        </div>
+                    </div>
+                    <div class="news-card card-slide">
+                        <img src="./img/news/news_2.jpg" alt="뉴스2">
+                        <div class="news-card-info card-slide-info">
+                            <h4>美 음악시장 풀은 노머스, 코스닥 노크..."내년 매출 1000억 목표"</h4>
+                            <span>머니투데이 | 2024.09.30</span>
+                        </div>
+                    </div>
+                    <div class="news-card card-slide">
+                        <img src="./img/news/news_3.jpg" alt="뉴스3">
+                        <div class="news-card-info card-slide-info">
+                            <h4>K-팝 인기 힘입어 훨훨...'엔터테크' 기업이 뜬다</h4>
+                            <span>뉴스1 | 2023.11.22</span>
+                        </div>
+                    </div>
+                    <div class="news-card card-slide">
+                        <img src="./img/news/news_4.jpg" alt="뉴스4">
+                        <div class="news-card-info card-slide-info">
+                            <h4>"돈 흐르는 길목에 서다…상상초월 '엔터테크' [스페셜리포트]"</h4>
+                            <span>매경이코노미ㅣ2023.12.5.</span>
+                        </div>
+                    </div>
+                    <div class="news-card card-slide">
+                        <img src="./img/news/news_5.jpg" alt="뉴스5">
+                        <div class="news-card-info card-slide-info">
+                            <h4>[인터뷰] 아티스트와 비즈니스 모델의 동반성장, 김선우 원더월/프롬 운영총괄 이사</h4>
+                            <span>씨네21ㅣ2023.7.27</span>
+                        </div>
+                    </div>
+                    <div class="news-card card-slide">
+                        <img src="./img/news/news_6.jpg" alt="뉴스6">
+                        <div class="news-card-info card-slide-info">
+                            <h4>태풍에도 끄떡 없이…BTS 뷔도 빠져든 브루노 메이저의 감성</h4>
+                            <span>서울경제ㅣ2023.8.14</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn next">
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </button>
+            </div>
+
+            <div class="news-press">
+                <h3>보도자료</h3>
+                <ul>
+                    <li>
+                        <span class="press-title">노머스, 공모가 상단 30,200원 확정</span>
+                        <span class="press-date">2024-11-01</span>
+                    </li>
+                    <li>
+                        <span class="press-title">[IPO 간담회] 노머스, 글로벌 종합 엔터 솔류션 기업으로 도약</span>
+                        <span class="press-date">2024-10-29</span>
+                    </li>
+                    <li>
+                        <span class="press-title">'엔터 테크' 노머스, 증권신고서 제출... 11월 초 코스닥 상장으로 '종합 엔터 솔루션' 성장 목표</span>
+                        <span class="press-date">2024-09-13</span>
+                    </li>
+                    <li>
+                        <span class="press-title">'엔터 테크' 노머스, 코스닥 상장 예비 심사 승인... 종합 엔터 솔루션 입지 강화</span>
+                        <span class="press-date">2024-08-09</span>
+                    </li>
+                    <li>
+                        <span class="press-title">원더월, 주우재 '프롬(fromm) 메세지' 서비스 오픈... 7일 간 무료 체험 제공</span>
+                        <span class="press-date">2024-08-02</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ── Section 5: Story ── -->
+        <section class="section_5 story">
+            <div class="section-title">
+                <h2>Knowmerce Story</h2>
+                <p>예술과 당신을 연결하는 사람들의 이야기입니다.</p>
+            </div>
+
+            <div class="story-slider-wrapper card-slider-wrapper">
+                <button class="slider-btn prev">
+                    <span class="material-symbols-outlined">arrow_back_ios</span>
+                </button>
+                <div class="story-slider card-slider">
+                    <div class="story-card card-slide">
+                        <img src="./img/story/story_1.jpg" alt="story1">
+                        <div class="story-card-info card-slide-info">
+                            <h4><span>Team</span><br>interview : "원더월스러움"을 잃지 않고 싶어요 - 클래스 마케팅팀 리드 유지은님편</h4>
+                            <span>2023.11.22</span>
+                        </div>
+                    </div>
+                    <div class="story-card card-slide">
+                        <img src="./img/story/story_2.jpg" alt="story2">
+                        <div class="story-card-info card-slide-info">
+                            <h4><span>Insight</span><br>놀라운 관람 경험을 선사한 잊지 못할 여름밤 &lt;Haus of Wonder 2022&gt; Day 2</h4>
+                            <span>2023.11.22</span>
+                        </div>
+                    </div>
+                    <div class="story-card card-slide">
+                        <img src="./img/story/story_3.jpg" alt="story3">
+                        <div class="story-card-info card-slide-info">
+                            <h4><span>Insight</span><br>놀라운 지붕으로의 초대, &lt;Haus of Wonder 2022&gt; Day 1</h4>
+                            <span>2023.11.22</span>
+                        </div>
+                    </div>
+                    <div class="story-card card-slide">
+                        <img src="./img/story/story_4.png" alt="story4">
+                        <div class="story-card-info card-slide-info">
+                            <h4><span>Culture & Life</span><br>[Working Lunch] 매주 목요일, 그들이 한 곳에 모이는 이유</h4>
+                            <span>2023.11.22</span>
+                        </div>
+                    </div>
+                    <div class="story-card card-slide">
+                        <img src="./img/story/story_5.png" alt="story5">
+                        <div class="story-card-info card-slide-info">
+                            <h4><span>Team</span><br>interview : 일을 스스로 즐길 포인트는 얼마든지 있습니다 - 제작 총괄 PD 김은지님</h4>
+                            <span>2023.11.22</span>
+                        </div>
+                    </div>
+                    <div class="story-card card-slide">
+                        <img src="./img/story/story_6.png" alt="story6">
+                        <div class="story-card-info card-slide-info">
+                            <h4><span>Team</span><br>interview : '잘 파는 사람'이 되고 싶습니다 - 커머스팀 이훈님, 최연인님</h4>
+                            <span>2023.11.22</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn next">
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <div class="footer_slide-wrapper">
+        <div class="slide-track">
+            <!-- 원본 -->
+            <img src="./img/icon/fromm_logo.svg" alt="fromm">
+            <img src="./img/icon/wonderwall_logo.svg" alt="wonderwall">
+            <img src="./img/icon/fromm_logo.svg" alt="fromm">
+            <img src="./img/icon/wonderwall_logo.svg" alt="wonderwall">
+            <img src="./img/icon/fromm_logo.svg" alt="fromm">
+            <img src="./img/icon/wonderwall_logo.svg" alt="wonderwall">
+            <img src="./img/icon/fromm_logo.svg" alt="fromm">
+            <img src="./img/icon/wonderwall_logo.svg" alt="wonderwall">
+            <!-- 복사본 (원본과 동일하게) -->
+            <img src="./img/icon/fromm_logo.svg" alt="fromm">
+            <img src="./img/icon/wonderwall_logo.svg" alt="wonderwall">
+            <img src="./img/icon/fromm_logo.svg" alt="fromm">
+            <img src="./img/icon/wonderwall_logo.svg" alt="wonderwall">
+            <img src="./img/icon/fromm_logo.svg" alt="fromm">
+            <img src="./img/icon/wonderwall_logo.svg" alt="wonderwall">
+            <img src="./img/icon/fromm_logo.svg" alt="fromm">
+            <img src="./img/icon/wonderwall_logo.svg" alt="wonderwall">
+        </div>
+    </div>
+    <footer>
+        <div class="footer-inner">
+            <a href="./index.html" class="logo">Knowmerce</a>
+            <div class="footer-info">
+                <p>대표 : 김영준 | 사업자번호 : 225-87-01399 | 통신판매업 신고번호 : 2020-서울강남-03417</p>
+                <p>주소 : (06039) 서울특별시 강남구 논현로149길 67-5 (논현동 12-2) 1층~5층 | Tel. 02-6409-9888</p>
+                <p>info@wonderwall.kr</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
