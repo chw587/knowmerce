@@ -1,5 +1,6 @@
 // ===============================
 // Hero YouTube 영상 자동 반복
+// GitHub Pages 대응 수정본
 // ===============================
 
 const videos = [
@@ -18,7 +19,7 @@ function playVideo(index) {
     if (!iframe) return;
 
     iframe.src =
-        `https://www.youtube.com/embed/${videos[index].id}?autoplay=1&mute=1&controls=0&rel=0&playsinline=1`;
+        `https://www.youtube-nocookie.com/embed/${videos[index].id}?autoplay=1&mute=1&controls=0&rel=0&playsinline=1&modestbranding=1`;
 
     clearTimeout(videoTimer);
 
@@ -35,7 +36,9 @@ function playVideo(index) {
     }, videos[index].time * 1000);
 }
 
-playVideo(current);
+window.addEventListener("load", () => {
+    playVideo(current);
+});
 
 
 // ===============================
@@ -75,7 +78,9 @@ if (slider && prevBtn && nextBtn && cards.length > 0) {
         isAnimating = true;
 
         if (currentIndex === totalCards - 1) {
+
             currentIndex = 0;
+
             slider.scrollTo({
                 left: 0,
                 behavior: 'smooth'
@@ -86,8 +91,10 @@ if (slider && prevBtn && nextBtn && cards.length > 0) {
             }, 500);
 
         } else {
+
             currentIndex++;
             slideTo(currentIndex);
+
         }
 
     });
@@ -98,6 +105,7 @@ if (slider && prevBtn && nextBtn && cards.length > 0) {
         isAnimating = true;
 
         if (currentIndex === 0) {
+
             currentIndex = totalCards - 1;
 
             slider.scrollTo({
@@ -110,8 +118,10 @@ if (slider && prevBtn && nextBtn && cards.length > 0) {
             }, 500);
 
         } else {
+
             currentIndex--;
             slideTo(currentIndex);
+
         }
 
     });
@@ -169,8 +179,10 @@ if (storySlider && storyPrevBtn && storyNextBtn && storyCards.length > 0) {
             }, 500);
 
         } else {
+
             storyIndex++;
             storySlideTo(storyIndex);
+
         }
 
     });
@@ -194,8 +206,10 @@ if (storySlider && storyPrevBtn && storyNextBtn && storyCards.length > 0) {
             }, 500);
 
         } else {
+
             storyIndex--;
             storySlideTo(storyIndex);
+
         }
 
     });
