@@ -56,7 +56,11 @@
 
         <!-- ── Section 1: Hero ── -->
         <section class="section_1 hero">
-            <video class="hero-video" id="heroVideo" autoplay muted playsinline></video>
+            <div class="hero-video-wrapper">
+                <iframe id="heroIframe" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen>
+                </iframe>
+            </div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="hero-logo-mark">
@@ -315,11 +319,11 @@
                 </button>
             </div>
         </section>
+
     </main>
 
     <div class="footer_slide-wrapper">
         <div class="slide-track">
-            <!-- 원본 -->
             <img src="./img/icon/fromm_logo.svg" alt="fromm">
             <img src="./img/icon/wonderwall_logo.svg" alt="wonderwall">
             <img src="./img/icon/fromm_logo.svg" alt="fromm">
@@ -328,7 +332,6 @@
             <img src="./img/icon/wonderwall_logo.svg" alt="wonderwall">
             <img src="./img/icon/fromm_logo.svg" alt="fromm">
             <img src="./img/icon/wonderwall_logo.svg" alt="wonderwall">
-            <!-- 복사본 (원본과 동일하게) -->
             <img src="./img/icon/fromm_logo.svg" alt="fromm">
             <img src="./img/icon/wonderwall_logo.svg" alt="wonderwall">
             <img src="./img/icon/fromm_logo.svg" alt="fromm">
@@ -339,6 +342,7 @@
             <img src="./img/icon/wonderwall_logo.svg" alt="wonderwall">
         </div>
     </div>
+
     <footer>
         <div class="footer-inner">
             <a href="./index.html" class="logo">Knowmerce</a>

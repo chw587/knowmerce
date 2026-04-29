@@ -1,29 +1,41 @@
-// 영상재생
 const videos = [
-    "https://drive.google.com/uc?export=view&id=1Fjh7OCLdR3MyRg8XTxjjMbkjKDCm6URk",
-    "https://drive.google.com/uc?export=view&id=1JR8CSnB94VroQFhZO1ESaFxhD27B2LTd",
+    { id: "L8BTfz-mtIg", time: 210 },
+    { id: "hGUcQMZCKjk", time: 180 },
+    { id: "hGUcQMZCKjk", time: 180 }
 ];
 
-const videoEl = document.getElementById("heroVideo");
 let current = 0;
 
-videoEl.src = videos[current];
-videoEl.play();
+const iframe = document.getElementById("heroIframe");
 
-videoEl.addEventListener("ended", () => {
-    current = (current + 1) % videos.length;
-    videoEl.src = videos[current];
-    videoEl.play();
-});
+function playVideo(index){
+
+    iframe.src =
+    `https://www.youtube.com/embed/${videos[index].id}?autoplay=1&mute=1&controls=0&rel=0`;
+
+    setTimeout(() => {
+
+        current++;
+
+        if(current >= videos.length){
+            current = 0;
+        }
+
+        playVideo(current);
+
+    }, videos[index].time * 1000);
+}
+
+playVideo(current);
 
 
-// 뉴스 슬라이더
+// ── 뉴스 슬라이더 ──
 const slider = document.querySelector('.news-slider');
-const prevBtn = document.querySelector('.slider-btn.prev');
-const nextBtn = document.querySelector('.slider-btn.next');
+const prevBtn = document.querySelector('.news-slider-wrapper .slider-btn.prev');
+const nextBtn = document.querySelector('.news-slider-wrapper .slider-btn.next');
 
 const cards = document.querySelectorAll('.news-card');
-const totalCards = cards.length; // 6개
+const totalCards = cards.length;
 let currentIndex = 0;
 let isAnimating = false;
 
@@ -32,19 +44,14 @@ function getCardWidth() {
 }
 
 function slideTo(index) {
-    slider.scrollTo({
-        left: getCardWidth() * index,
-        behavior: 'smooth'
-    });
+    slider.scrollTo({ left: getCardWidth() * index, behavior: 'smooth' });
     setTimeout(() => { isAnimating = false; }, 500);
 }
 
 nextBtn.addEventListener('click', () => {
     if (isAnimating) return;
     isAnimating = true;
-
     if (currentIndex === totalCards - 1) {
-        // 마지막 → 첫번째로 순간이동
         currentIndex = 0;
         slider.scrollTo({ left: 0, behavior: 'smooth' });
         setTimeout(() => { isAnimating = false; }, 500);
@@ -57,9 +64,7 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
     if (isAnimating) return;
     isAnimating = true;
-
     if (currentIndex === 0) {
-        // 첫번째 → 마지막으로 순간이동
         currentIndex = totalCards - 1;
         slider.scrollTo({ left: getCardWidth() * currentIndex, behavior: 'smooth' });
         setTimeout(() => { isAnimating = false; }, 500);
@@ -70,7 +75,7 @@ prevBtn.addEventListener('click', () => {
 });
 
 
-// 스토리 슬라이더
+// ── 스토리 슬라이더 ──
 const storySlider = document.querySelector('.story-slider');
 const storyPrevBtn = document.querySelector('.story-slider-wrapper .slider-btn.prev');
 const storyNextBtn = document.querySelector('.story-slider-wrapper .slider-btn.next');
@@ -85,17 +90,13 @@ function getStoryCardWidth() {
 }
 
 function storySlideTo(index) {
-    storySlider.scrollTo({
-        left: getStoryCardWidth() * index,
-        behavior: 'smooth'
-    });
+    storySlider.scrollTo({ left: getStoryCardWidth() * index, behavior: 'smooth' });
     setTimeout(() => { storyAnimating = false; }, 500);
 }
 
 storyNextBtn.addEventListener('click', () => {
     if (storyAnimating) return;
     storyAnimating = true;
-
     if (storyIndex === storyTotalCards - 1) {
         storyIndex = 0;
         storySlider.scrollTo({ left: 0, behavior: 'smooth' });
@@ -109,7 +110,6 @@ storyNextBtn.addEventListener('click', () => {
 storyPrevBtn.addEventListener('click', () => {
     if (storyAnimating) return;
     storyAnimating = true;
-
     if (storyIndex === 0) {
         storyIndex = storyTotalCards - 1;
         storySlider.scrollTo({ left: getStoryCardWidth() * storyIndex, behavior: 'smooth' });
@@ -121,7 +121,7 @@ storyPrevBtn.addEventListener('click', () => {
 });
 
 
-// Header 스크롤 효과
+// ── Header 스크롤 효과 ──
 const header = document.querySelector('header');
 const heroHeight = document.querySelector('.hero').offsetHeight;
 
