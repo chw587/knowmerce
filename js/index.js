@@ -1,12 +1,13 @@
 // ===============================
 // Hero YouTube 영상 자동 반복
-// GitHub Pages 대응 수정본
+// 영상 리스트 변경본
 // ===============================
 
 const videos = [
-    { id: "L8BTfz-mtIg", time: 210 },
-    { id: "hGUcQMZCKjk", time: 180 },
-    { id: "hGUcQMZCKjk", time: 180 }
+    { id: "vvdcXFDIrIk", time: 180 },
+    { id: "y99oMCIcYkU", time: 180 },
+    { id: "zcYW4XYFF08", time: 180 },
+    { id: "z3K_OHtIObk", time: 180 }
 ];
 
 let current = 0;
