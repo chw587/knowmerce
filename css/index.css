@@ -5,6 +5,7 @@
     --wh: #fafafa;
     --wh_20: rgba(250, 250, 250, 0.20);
     --text: #111;
+    --text_20: rgba(17, 17, 17, 0.20);
     --sub_text: #757575;
     --line: #ddd;
     --footer: #333;
@@ -160,11 +161,11 @@ header {
     left: 0;
     z-index: 100;
     width: 100%;
-    padding: 20px 40px;
+    padding: 20px 0px;
     border-bottom: 1px solid var(--wh_20);
 }
 
-header>div {
+header>div:first-child {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -207,6 +208,11 @@ nav a {
     gap: var(--gap_2);
 }
 
+.left-group .active {
+    font-weight: 700;
+    color: var(--main);
+}
+
 .badge-tech {
     padding: 4px 12px;
     border: 1px solid var(--wh);
@@ -220,9 +226,9 @@ nav a {
 
 nav a:hover,
 .badge-tech:hover,
-.social-icons a:hover {
-    border-color: var(--main);
-    color: var(--main);
+.social-icons svg:hover {
+    border-color: var(--main) !important;
+    color: var(--main) !important;
 }
 
 .social-icons {
@@ -245,6 +251,76 @@ nav a:hover,
     width: 20px;
     height: 20px;
     fill: currentColor;
+}
+
+/* sub_menu - 260506 */
+/* ── Sub Menu ── */
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--wh);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 99;
+}
+
+header:hover {
+    background: var(--wh);
+}
+
+header:hover .logo,
+header:hover nav a,
+header:hover .badge-tech,
+header:hover .social-icons svg {
+    color: var(--text);
+    border-color: var(--text);
+}
+
+header:hover .sub-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.08);
+}
+
+.sub-menu-inner {
+    display: flex;
+    gap: var(--title_gap);
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px 0px;
+}
+
+/* ── Sub Col ── */
+.sub-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap_2);
+    flex: 1;
+}
+
+.sub-col a:first-child {
+    font-size: var(--sub_body);
+    font-weight: bold;
+    color: var(--text);
+    text-decoration: none;
+    margin-bottom: 4px;
+}
+
+.sub-col a {
+    font-size: var(--sub_body);
+    color: var(--sub_text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.sub-col a:hover {
+    color: var(--main);
 }
 
 
@@ -292,6 +368,82 @@ main {
 }
 
 
+
+/* ── section_1 scroll ── */
+.main_content .section_1 {
+    position: relative;
+    height: 200vh;
+}
+
+.main_content .section_1 .sticky-wrap {
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_content .section_1 .bg_img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.main_content .section_1 .bg_img img {
+    width: 72%;
+    height: 65vh;
+    object-fit: cover;
+    border-radius: 32px;
+    transition: all 0.08s linear;
+}
+
+.main_content .section_1 .bg_img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+.main_content .section_1 .about-content {
+    position: absolute;
+    width: 1280px;
+    top: 65%;
+    transform: translate(0, -50%);
+    z-index: 5;
+    color: white;
+    text-align: start;
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.main_content .section_1 .about-content.show {
+    opacity: 1;
+}
+
+.main_content .section_1 .about-logo-mark .logo {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.main_content .section_1 .about-desc {
+    margin-top: 24px;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+
+
+/* ============================================================
+   INDEX
+   ============================================================ */
 /* ======== Section 1: Hero ======== */
 #heroIframe {
     position: relative;
@@ -312,11 +464,15 @@ main {
     object-fit: cover;
 }
 
-.hero-overlay {
+.overlay {
     position: absolute;
-    inset: 0;
+
     z-index: 1;
     background: rgba(0, 0, 0, 0.65);
+}
+
+.hero-overlay {
+    inset: 0;
 }
 
 .hero-content {
@@ -673,6 +829,45 @@ main {
 
 
 
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.section {
+    padding: 100px 0;
+}
+
+.identity {
+    position: relative;
+    background: var(--text);
+}
+
+/* 희원 - section1 하단 그라데이션 */
+.main_content .section_1 .section1-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(17, 17, 17, 0.6) 60%,
+        #111111 100%
+    );
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0; /* 희원 - 초기값 0 */
+    transition: opacity 0.3s ease;
+}
+
+/* 희원 - about-content z-index 조정 */
+.main_content .section_1 .about-content {
+    z-index: 15;
+}
+
+
+
 /* ============================================================
    Footer
    ============================================================ */
@@ -712,7 +907,7 @@ footer {
 .footer-inner {
     display: flex;
     flex-direction: column;
-    gap : var(--gap_2);
+    gap: var(--gap_2);
     margin: 0 auto;
 }
 

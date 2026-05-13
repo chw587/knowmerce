@@ -222,7 +222,7 @@ if (storySlider && storyPrevBtn && storyNextBtn && storyCards.length > 0) {
 // ===============================
 
 const header = document.querySelector('header');
-const hero = document.querySelector('.hero');
+const hero = document.querySelector('.section_1');
 
 if (header && hero) {
 
@@ -238,3 +238,49 @@ if (header && hero) {
 
     });
 }
+
+
+// ===============================
+// 스크롤 효과
+// ===============================
+const section = document.querySelector('.main_content .section_1');
+const image = document.querySelector('.main_content .section_1 .bg_img img');
+const content = document.querySelector('.main_content .section_1 .about-content');
+const gradient = document.querySelector('.main_content .section_1 .section1-gradient'); /* 희원 */
+
+window.addEventListener('scroll', () => {
+
+    const rect = section.getBoundingClientRect();
+
+    const progress = Math.min(
+        Math.max((-rect.top) / (window.innerHeight * 1.2), 0),
+        1
+    );
+
+    const width = 72 + (28 * progress);
+    const height = 65 + (35 * progress);
+
+    image.style.width = width + '%';
+    image.style.height = height + 'vh';
+
+    image.style.transform = `
+        translateY(${140 - (140 * progress)}px)
+    `;
+
+    const radius = 32 - (32 * progress);
+
+    image.style.borderRadius = radius + 'px';
+
+    if (progress > 0.45) {
+        content.classList.add('show');
+    } else {
+        content.classList.remove('show');
+    }
+
+    /* 희원 - 이미지가 풀스크린에 가까워질수록 그라데이션 등장 */
+    if (gradient) {
+        const gradientOpacity = Math.min(Math.max((progress - 0.6) / 0.4, 0), 1);
+        gradient.style.opacity = gradientOpacity;
+    }
+
+});
